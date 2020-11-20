@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App</title>
+		
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+
+	<body>
+		<div class="w3-bar w3-green">
+			<%= link_to('Home', '/', {class: 'w3-bar-item w3-button'}) %>
+			<%= link_to('Mercedes-Benz', '/mb', {class: 'w3-bar-item w3-button'}) %>
+			<%= link_to('BMW', '/bmw', {class: 'w3-bar-item w3-button'}) %>
+			<%= link_to('Audi', '/audi', {class: 'w3-bar-item w3-button'}) %>
+		</div>
+		<div class="w3-container">
+			<h2><%= @page_title %></h2>
+			<hr/>
+			<% if request.path != '/' %><div class="w3-container w3-border w3-large"><% end %>
+			<%= yield %>
+			<% if request.path != '/' %></div><% end %>
+		</div>
+	</body>
+</html>
