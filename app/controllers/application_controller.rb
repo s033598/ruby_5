@@ -1,3 +1,3 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base #klases ApplicationController pradzia
 
-end
+end #klases ApplicationController pabaiga
